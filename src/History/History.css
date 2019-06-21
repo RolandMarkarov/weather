@@ -1,0 +1,12 @@
+.list {
+	margin: 20px auto 0;
+	background-color: rgba(0, 0, 0, 0.356);
+	text-align: center;
+	width: 20vw;
+	height: 10vh;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	list-style: none;
+	align-content: center;
+}

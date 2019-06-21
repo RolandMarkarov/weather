@@ -1,0 +1,17 @@
+.form {
+	display: flex;
+	justify-content: space-around;
+	width: 20rem;
+	margin: 0 auto;
+}
+.form_input {
+	padding: 0.2rem 1rem;
+}
+.form_button {
+	border: none;
+	background-color: rgb(2, 136, 136);
+	font-size: 18px;
+	color: #fff;
+	padding: 0.2rem 1rem;
+	margin-left: 0.5rem;
+}

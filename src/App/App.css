@@ -1,0 +1,17 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	flex-basis: auto;
+	font-family: "Roboto";
+	/* outline: solid red 1px; */
+}
+
+.container {
+	height: 100vh;
+	background-image: url("../img/shutterstock_114347131.jpg");
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: cover;
+	padding-top: 1rem;
+}

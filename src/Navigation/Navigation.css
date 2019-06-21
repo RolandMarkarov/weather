@@ -1,0 +1,16 @@
+.navigation {
+	text-decoration: none;
+	text-transform: none;
+	color: #fff;
+	text-align: center;
+	margin: 20px auto;
+	display: block;
+	width: 250px;
+	font-size: 2rem;
+	text-shadow: 2px 2px 2px #000;
+	border: 2px solid transparent;
+}
+
+.navigation:hover {
+	border: 2px solid white;
+}
