@@ -11,7 +11,7 @@ class App extends Component {
 		form: '',
 		searchHistory: [],
 		currentCity: '',
-		cityID: ''
+		error: {}
 	};
 	getCity = (e) => {
 		e.preventDefault();
@@ -24,13 +24,18 @@ class App extends Component {
 		let searchedCity = this.state.city;
 		e.preventDefault();
 		// eslint-disable-next-line
-		const URL_Daily = `api.openweathermap.org/data/2.5/forecast?id=${this.state.cityID}`;
-		const URL = `http://openweathermap.org/data/2.5/weather?q=${this.state.city ||
-			this.state.currentCity}&appid=b6907d289e10d714a6e88b30761fae22`;
+		// const URL_Daily = `api.openweathermap.org/data/2.5/forecast?id=${this.state.cityID}`;
+
+		const URL = `https://api.openweathermap.org/data/2.5/weather?q=${this.state
+			.city}&appid=609234da9910e806cae17cef318a16ae`;
 		fetch(URL)
 			.then((res) => res.json())
-			.then((data) => this.setState({ apiInfo: data }))
-			.catch((err) => console.log(err));
+			.then((data) =>
+				this.setState({
+					apiInfo: data
+				})
+			)
+			.catch((err) => this.setState({ error: err }));
 
 		if (this.state.searchHistory.length < 6) {
 			this.setState((prev) => ({
@@ -49,7 +54,8 @@ class App extends Component {
 	};
 
 	render() {
-		const { city, form, searchHistory, apiInfo } = this.state;
+		const { city, form, searchHistory, apiInfo, error } = this.state;
+		console.log(this.state.apiInfo);
 		return (
 			<div className="container">
 				<Switch>
@@ -66,6 +72,7 @@ class App extends Component {
 								form={form}
 								apiInfo={apiInfo}
 								searchHistory={searchHistory}
+								error={error}
 							/>
 						)}
 					/>

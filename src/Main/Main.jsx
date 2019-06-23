@@ -4,12 +4,12 @@ import Navigation from '../Navigation/Navigation';
 import Form from '../Form/form';
 import History from '../History/History';
 
-const Main = ({ getCity, city, onSubmit, form, apiInfo, searchHistory }) => {
+const Main = ({ getCity, city, onSubmit, form, apiInfo, searchHistory, error }) => {
 	return (
 		<div>
 			<Form getCity={getCity} city={city} onSubmit={onSubmit} form={form} />
 			<History searchHistory={searchHistory} />
-			<Board apiInfo={apiInfo} />
+			<Board apiInfo={apiInfo} error={error} />
 			<Navigation prop={'See Details'} path={'/Detals'} />
 		</div>
 	);
